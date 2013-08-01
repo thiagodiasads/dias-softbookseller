@@ -1,0 +1,1 @@
+O projeto sera um software para gerenciar uma revistaria.
