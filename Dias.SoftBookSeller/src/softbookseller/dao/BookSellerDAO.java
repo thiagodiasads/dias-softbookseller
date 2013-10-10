@@ -15,7 +15,7 @@ public class BookSellerDAO {
 	public Cliente buscaClientePorNome(String name) {
 
 		Cliente cliente = null;
-
+		//Comando para o BD
 		String cmd = "select * from clientes where nome= ?";
 
 		Connection db = null;
