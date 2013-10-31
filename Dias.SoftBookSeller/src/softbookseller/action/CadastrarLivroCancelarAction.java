@@ -3,15 +3,14 @@ package softbookseller.action;
 import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
-
-import softbookseller.gui.JCadastrarClientePanel;
+import softbookseller.gui.JCadastrarLivroPanel;
 
 /**
  * 
  * @author Dias
  *
  */
-public class CadastrarClienteCancelarAction extends AbstractAction {
+public class CadastrarLivroCancelarAction extends AbstractAction {
 	/**
 	 * 
 	 */
@@ -20,13 +19,13 @@ public class CadastrarClienteCancelarAction extends AbstractAction {
 	/**
 	 * 
 	 */
-	private JCadastrarClientePanel panel;
+	private JCadastrarLivroPanel panel;
 
 	/**
 	 * 
 	 * @param panel
 	 */
-	public CadastrarClienteCancelarAction(JCadastrarClientePanel panel) {
+	public CadastrarLivroCancelarAction(JCadastrarLivroPanel panel) {
 		super("Cancelar");
 		this.panel = panel;
 	}

@@ -1,9 +1,11 @@
 package softbookseller.gui;
 
+import java.awt.CardLayout;
 import java.awt.FlowLayout;
 import java.awt.event.KeyEvent;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -18,21 +20,30 @@ import softbookseller.pojo.Cliente;
  * @author thiagodiasads@gmail.com
  *
  */
-public class CadastrarClientePanel extends JPanel {
-	/**
-	 * 
-	 */
+public class JCadastrarClientePanel extends JPanel {
+	public JFrame getFrame() {
+		return frame;
+	}
+	
+	public CardLayout getCard() {
+		return card;
+	}
+	
 	private static final long serialVersionUID = 1L;
 
 	private JTextField nome;
 	private JTextField cpf;
 	private JTextField email;
+	
+	private JFrame frame;
+	private CardLayout card;
+
 
 	/**
 	 * 
 	 * @return
 	 */
-	public Cliente getAluno() {
+	public Cliente getCliente() {
 		return new Cliente(nome.getText(),cpf.getText(),email.getText());
 	}
 
@@ -46,9 +57,12 @@ public class CadastrarClientePanel extends JPanel {
 	/**
 	 * 
 	 */
-	public CadastrarClientePanel() {
+	public JCadastrarClientePanel(JFrame frame, CardLayout card) {
 		JLabel label;
-
+		
+		this.frame = frame;
+		this.card = card;
+		
 		setLayout(new FlowLayout());
 
 		label = new JLabel("Nome");
